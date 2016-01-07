@@ -3,9 +3,12 @@
 @section('content')
 
 @if ($companies->count())
-  <ul>
+  <ul class="list-group">
   @foreach ($companies as $company)
-    <li><a href="{{ URL::route('company.show', $company->id) }}">{{ $company->name }} - {{ $company->description }}</a></li>
+    <li class="list-group-item">
+      <strong><a href="{{ URL::route('company.show', $company->id) }}">{{ $company->name }}</a></strong>
+      @if ($company->description)<p>{{ $company->description }}</p>@endif
+    </li>
   @endforeach
   </ul>
 @else

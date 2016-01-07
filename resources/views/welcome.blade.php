@@ -2,6 +2,7 @@
 
 @section('content')
 
-<div>Welcome to the site!</div>
+<p>Welcome to the site!</p>
+<p>Check out all of the <a href="{{ URL::route('company.index') }}">companies</a> we already have!</p>
 
 @stop

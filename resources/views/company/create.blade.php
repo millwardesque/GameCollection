@@ -3,13 +3,17 @@
 @section('content')
 
 {!! Form::open(array('route' => 'company.store')) !!}
-  {!! Form::label('name', 'Company Name'); !!}
-  {!! Form::text('name') !!}
+  <div class="form-group">
+    {!! Form::label('name', 'Company Name'); !!}
+    {!! Form::text('name', '', array('class' => 'form-control')) !!}
+  </div>
 
-  {!! Form::label('description', 'Company Description'); !!}
-  {!! Form::textarea('description') !!}
+  <div class="form-group">
+    {!! Form::label('description', 'Company Description'); !!}
+    {!! Form::textarea('description', '', array('class' => 'form-control')) !!}
+  </div>
 
-  {!! Form::submit('Create'); !!}
+  {!! Form::submit('Create', array('class' => 'btn btn-default')); !!}
 {!! Form::close() !!}
 
 @stop

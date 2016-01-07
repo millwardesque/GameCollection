@@ -7,10 +7,7 @@
 @endif
 
 <div>
-  <a href="{{ URL::route('company.edit', $company->id) }}">Edit</a>
-</div>
-
-<div>
-  <a href="{{ URL::route('company.index') }}">List all companies</a>
+  <a class="btn btn-default" href="{{ URL::route('company.edit', $company->id) }}">Edit</a>
+  <a class="btn btn-default" href="{{ URL::route('company.index') }}">List all companies</a>
 </div>
 @stop
